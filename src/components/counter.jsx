@@ -2,9 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
-    imageUrl: "https://picsum.photos/200",
-    tags: ["tag1", "tag2", "tag3", "tag4", "tag5"]
+    count: 0
   };
 
   //   constructor() {
@@ -21,19 +19,19 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <img src={this.state.imageUrl} alt="" />
+        
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={this.handleIncrement}
           className="btn btn-secondary btn-sm"
         >
-          Viewed
+          Increment
         </button>
-        <ul>
+        {/* <ul>
           {this.state.tags.map(tag => (
             <li key={tag}>{tag}</li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     );
   }
